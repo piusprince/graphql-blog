@@ -14,9 +14,15 @@ module.exports = {
             return input
         },
 
-        updateBlog(_, {input}, ctx) {
-            const addblog = ctx.model.blog.update(input.author, input.updates)
-            return addblog
+        updateBlog(_, {input}) {
+           console.log(blog)
+        //    blog.replace({})
+        },
+
+        deleteBlog(_, {input}) {
+            console.log(blog)
+            blog.pop({...input})
+            console.log(blog)
         }
     }
     
